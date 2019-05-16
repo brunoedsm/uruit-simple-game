@@ -1,2 +1,2 @@
 # UruIT
-Game of Drones
+Game of Drones Programming Assessment
