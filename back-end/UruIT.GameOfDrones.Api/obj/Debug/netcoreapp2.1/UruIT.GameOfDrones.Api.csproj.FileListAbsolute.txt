@@ -1,0 +1,14 @@
+C:\PersonalGitHub\UruIT\back-end\UruIT.GameOfDrones.Api\bin\Debug\netcoreapp2.1\UruIT.GameOfDrones.Api.deps.json
+C:\PersonalGitHub\UruIT\back-end\UruIT.GameOfDrones.Api\bin\Debug\netcoreapp2.1\UruIT.GameOfDrones.Api.runtimeconfig.json
+C:\PersonalGitHub\UruIT\back-end\UruIT.GameOfDrones.Api\bin\Debug\netcoreapp2.1\UruIT.GameOfDrones.Api.runtimeconfig.dev.json
+C:\PersonalGitHub\UruIT\back-end\UruIT.GameOfDrones.Api\bin\Debug\netcoreapp2.1\UruIT.GameOfDrones.Api.dll
+C:\PersonalGitHub\UruIT\back-end\UruIT.GameOfDrones.Api\bin\Debug\netcoreapp2.1\UruIT.GameOfDrones.Api.pdb
+C:\PersonalGitHub\UruIT\back-end\UruIT.GameOfDrones.Api\obj\Debug\netcoreapp2.1\UruIT.GameOfDrones.Api.csprojAssemblyReference.cache
+C:\PersonalGitHub\UruIT\back-end\UruIT.GameOfDrones.Api\obj\Debug\netcoreapp2.1\UruIT.GameOfDrones.Api.csproj.CoreCompileInputs.cache
+C:\PersonalGitHub\UruIT\back-end\UruIT.GameOfDrones.Api\obj\Debug\netcoreapp2.1\UruIT.GameOfDrones.Api.RazorAssemblyInfo.cache
+C:\PersonalGitHub\UruIT\back-end\UruIT.GameOfDrones.Api\obj\Debug\netcoreapp2.1\UruIT.GameOfDrones.Api.RazorAssemblyInfo.cs
+C:\PersonalGitHub\UruIT\back-end\UruIT.GameOfDrones.Api\obj\Debug\netcoreapp2.1\UruIT.GameOfDrones.Api.AssemblyInfoInputs.cache
+C:\PersonalGitHub\UruIT\back-end\UruIT.GameOfDrones.Api\obj\Debug\netcoreapp2.1\UruIT.GameOfDrones.Api.AssemblyInfo.cs
+C:\PersonalGitHub\UruIT\back-end\UruIT.GameOfDrones.Api\obj\Debug\netcoreapp2.1\UruIT.GameOfDrones.Api.RazorTargetAssemblyInfo.cache
+C:\PersonalGitHub\UruIT\back-end\UruIT.GameOfDrones.Api\obj\Debug\netcoreapp2.1\UruIT.GameOfDrones.Api.dll
+C:\PersonalGitHub\UruIT\back-end\UruIT.GameOfDrones.Api\obj\Debug\netcoreapp2.1\UruIT.GameOfDrones.Api.pdb

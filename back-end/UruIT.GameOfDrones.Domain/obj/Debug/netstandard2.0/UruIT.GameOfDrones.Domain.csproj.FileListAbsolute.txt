@@ -1,0 +1,9 @@
+C:\PersonalGitHub\UruIT\back-end\UruIT.GameOfDrones.Domain\bin\Debug\netstandard2.0\UruIT.GameOfDrones.Domain.deps.json
+C:\PersonalGitHub\UruIT\back-end\UruIT.GameOfDrones.Domain\bin\Debug\netstandard2.0\UruIT.GameOfDrones.Domain.dll
+C:\PersonalGitHub\UruIT\back-end\UruIT.GameOfDrones.Domain\bin\Debug\netstandard2.0\UruIT.GameOfDrones.Domain.pdb
+C:\PersonalGitHub\UruIT\back-end\UruIT.GameOfDrones.Domain\obj\Debug\netstandard2.0\UruIT.GameOfDrones.Domain.csprojAssemblyReference.cache
+C:\PersonalGitHub\UruIT\back-end\UruIT.GameOfDrones.Domain\obj\Debug\netstandard2.0\UruIT.GameOfDrones.Domain.csproj.CoreCompileInputs.cache
+C:\PersonalGitHub\UruIT\back-end\UruIT.GameOfDrones.Domain\obj\Debug\netstandard2.0\UruIT.GameOfDrones.Domain.AssemblyInfoInputs.cache
+C:\PersonalGitHub\UruIT\back-end\UruIT.GameOfDrones.Domain\obj\Debug\netstandard2.0\UruIT.GameOfDrones.Domain.AssemblyInfo.cs
+C:\PersonalGitHub\UruIT\back-end\UruIT.GameOfDrones.Domain\obj\Debug\netstandard2.0\UruIT.GameOfDrones.Domain.dll
+C:\PersonalGitHub\UruIT\back-end\UruIT.GameOfDrones.Domain\obj\Debug\netstandard2.0\UruIT.GameOfDrones.Domain.pdb
