@@ -7,3 +7,12 @@ C:\PersonalGitHub\UruIT\back-end\UruIT.GameOfDrones.Infrastructure\obj\Debug\net
 C:\PersonalGitHub\UruIT\back-end\UruIT.GameOfDrones.Infrastructure\obj\Debug\netstandard2.0\UruIT.GameOfDrones.Infrastructure.AssemblyInfo.cs
 C:\PersonalGitHub\UruIT\back-end\UruIT.GameOfDrones.Infrastructure\obj\Debug\netstandard2.0\UruIT.GameOfDrones.Infrastructure.dll
 C:\PersonalGitHub\UruIT\back-end\UruIT.GameOfDrones.Infrastructure\obj\Debug\netstandard2.0\UruIT.GameOfDrones.Infrastructure.pdb
+D:\GitHub\UruIT\back-end\UruIT.GameOfDrones.Infrastructure\bin\Debug\netstandard2.0\UruIT.GameOfDrones.Infrastructure.deps.json
+D:\GitHub\UruIT\back-end\UruIT.GameOfDrones.Infrastructure\bin\Debug\netstandard2.0\UruIT.GameOfDrones.Infrastructure.dll
+D:\GitHub\UruIT\back-end\UruIT.GameOfDrones.Infrastructure\bin\Debug\netstandard2.0\UruIT.GameOfDrones.Infrastructure.pdb
+D:\GitHub\UruIT\back-end\UruIT.GameOfDrones.Infrastructure\obj\Debug\netstandard2.0\UruIT.GameOfDrones.Infrastructure.csprojAssemblyReference.cache
+D:\GitHub\UruIT\back-end\UruIT.GameOfDrones.Infrastructure\obj\Debug\netstandard2.0\UruIT.GameOfDrones.Infrastructure.csproj.CoreCompileInputs.cache
+D:\GitHub\UruIT\back-end\UruIT.GameOfDrones.Infrastructure\obj\Debug\netstandard2.0\UruIT.GameOfDrones.Infrastructure.AssemblyInfoInputs.cache
+D:\GitHub\UruIT\back-end\UruIT.GameOfDrones.Infrastructure\obj\Debug\netstandard2.0\UruIT.GameOfDrones.Infrastructure.AssemblyInfo.cs
+D:\GitHub\UruIT\back-end\UruIT.GameOfDrones.Infrastructure\obj\Debug\netstandard2.0\UruIT.GameOfDrones.Infrastructure.dll
+D:\GitHub\UruIT\back-end\UruIT.GameOfDrones.Infrastructure\obj\Debug\netstandard2.0\UruIT.GameOfDrones.Infrastructure.pdb
