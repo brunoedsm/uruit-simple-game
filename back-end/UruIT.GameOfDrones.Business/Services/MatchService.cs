@@ -6,14 +6,15 @@ using UruIT.GameOfDrones.Domain.Entities;
 using UruIT.GameOfDrones.Domain.Contracts.Services;
 using UruIT.GameOfDrones.Domain.Common;
 using UruIT.GameOfDrones.Repository;
+using UruIT.GameOfDrones.Domain.Contracts.Repositories;
 
-namespace UruIT.GameOfDrones.Business
+namespace UruIT.GameOfDrones.Business.Services
 {
     public class MatchService : IMatchService, IService<Match>
     {
-        private readonly MatchRepository _repository;
+        private readonly IMatchRepository _repository;
 
-        public MatchService(MatchRepository repositoryDI)
+        public MatchService(IMatchRepository repositoryDI)
         {
             _repository = repositoryDI;
         }

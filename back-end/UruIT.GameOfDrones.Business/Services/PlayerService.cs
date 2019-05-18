@@ -6,14 +6,15 @@ using UruIT.GameOfDrones.Domain.Entities;
 using UruIT.GameOfDrones.Domain.Contracts.Services;
 using UruIT.GameOfDrones.Domain.Common;
 using UruIT.GameOfDrones.Repository;
+using UruIT.GameOfDrones.Domain.Contracts.Repositories;
 
-namespace UruIT.GameOfDrones.Business
+namespace UruIT.GameOfDrones.Business.Services
 {
     public class PlayerService : IPlayerService, IService<Player>
     {
-        private readonly PlayerRepository _repository;
+        private readonly IPlayerRepository _repository;
 
-        public PlayerService(PlayerRepository repositoryDI)
+        public PlayerService(IPlayerRepository repositoryDI)
         {
             _repository = repositoryDI;
         }

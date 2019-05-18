@@ -5,7 +5,7 @@ using UruIT.GameOfDrones.Domain.Contracts.Repositories;
  
 namespace UruIT.GameOfDrones.Repository
 {
-    public class HandSignalRepository : IRepository<HandSignal>
+    public class HandSignalRepository : IHandSignalRepository, IRepository<HandSignal>
     {
         readonly AssessmentContext _handSignalContext;
  

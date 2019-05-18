@@ -5,7 +5,7 @@ using UruIT.GameOfDrones.Domain.Contracts.Repositories;
 
 namespace UruIT.GameOfDrones.Repository
 {
-    public class RoundRepository : IRepository<Round>
+    public class RoundRepository : IRoundRepository, IRepository<Round>
     {
         readonly AssessmentContext _roundContext;
 

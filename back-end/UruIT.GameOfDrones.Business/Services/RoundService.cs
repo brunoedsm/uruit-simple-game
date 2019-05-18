@@ -6,14 +6,16 @@ using UruIT.GameOfDrones.Domain.Entities;
 using UruIT.GameOfDrones.Domain.Contracts.Services;
 using UruIT.GameOfDrones.Domain.Common;
 using UruIT.GameOfDrones.Repository;
+using UruIT.GameOfDrones.Domain.Contracts.Repositories;
 
-namespace UruIT.GameOfDrones.Business
+
+namespace UruIT.GameOfDrones.Business.Services
 {
     public class RoundService : IRoundService, IService<Round>
     {
-        private readonly RoundRepository _repository;
+        private readonly IRoundRepository _repository;
 
-        public RoundService(RoundRepository repositoryDI)
+        public RoundService(IRoundRepository repositoryDI)
         {
             _repository = repositoryDI;
         }

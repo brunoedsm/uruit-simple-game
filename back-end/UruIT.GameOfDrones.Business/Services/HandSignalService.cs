@@ -5,15 +5,16 @@ using System.Collections.Generic;
 using UruIT.GameOfDrones.Domain.Entities;
 using UruIT.GameOfDrones.Domain.Contracts.Services;
 using UruIT.GameOfDrones.Domain.Common;
+using UruIT.GameOfDrones.Domain.Contracts.Repositories;
 using UruIT.GameOfDrones.Repository;
 
-namespace UruIT.GameOfDrones.Business
+namespace UruIT.GameOfDrones.Business.Services
 {
     public class HandSignalService : IHandSignalService, IService<HandSignal>
     {
-        private readonly HandSignalRepository _repository;
+        private readonly IHandSignalRepository _repository;
 
-        public HandSignalService(HandSignalRepository repositoryDI)
+        public HandSignalService(IHandSignalRepository repositoryDI)
         {
             _repository = repositoryDI;
         }
