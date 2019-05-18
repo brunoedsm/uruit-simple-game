@@ -1,0 +1,16 @@
+D:\GitHub\UruIT\back-end\UruIT.GameOfDrones.Infrastructure\bin\Debug\netcoreapp2.2\UruIT.GameOfDrones.Infrastructure.deps.json
+D:\GitHub\UruIT\back-end\UruIT.GameOfDrones.Infrastructure\bin\Debug\netcoreapp2.2\UruIT.GameOfDrones.Infrastructure.runtimeconfig.json
+D:\GitHub\UruIT\back-end\UruIT.GameOfDrones.Infrastructure\bin\Debug\netcoreapp2.2\UruIT.GameOfDrones.Infrastructure.runtimeconfig.dev.json
+D:\GitHub\UruIT\back-end\UruIT.GameOfDrones.Infrastructure\bin\Debug\netcoreapp2.2\UruIT.GameOfDrones.Infrastructure.dll
+D:\GitHub\UruIT\back-end\UruIT.GameOfDrones.Infrastructure\bin\Debug\netcoreapp2.2\UruIT.GameOfDrones.Infrastructure.pdb
+D:\GitHub\UruIT\back-end\UruIT.GameOfDrones.Infrastructure\bin\Debug\netcoreapp2.2\UruIT.GameOfDrones.Domain.dll
+D:\GitHub\UruIT\back-end\UruIT.GameOfDrones.Infrastructure\bin\Debug\netcoreapp2.2\UruIT.GameOfDrones.Repository.dll
+D:\GitHub\UruIT\back-end\UruIT.GameOfDrones.Infrastructure\bin\Debug\netcoreapp2.2\UruIT.GameOfDrones.Repository.pdb
+D:\GitHub\UruIT\back-end\UruIT.GameOfDrones.Infrastructure\bin\Debug\netcoreapp2.2\UruIT.GameOfDrones.Domain.pdb
+D:\GitHub\UruIT\back-end\UruIT.GameOfDrones.Infrastructure\obj\Debug\netcoreapp2.2\UruIT.GameOfDrones.Infrastructure.csprojAssemblyReference.cache
+D:\GitHub\UruIT\back-end\UruIT.GameOfDrones.Infrastructure\obj\Debug\netcoreapp2.2\UruIT.GameOfDrones.Infrastructure.csproj.CoreCompileInputs.cache
+D:\GitHub\UruIT\back-end\UruIT.GameOfDrones.Infrastructure\obj\Debug\netcoreapp2.2\UruIT.GameOfDrones.Infrastructure.AssemblyInfoInputs.cache
+D:\GitHub\UruIT\back-end\UruIT.GameOfDrones.Infrastructure\obj\Debug\netcoreapp2.2\UruIT.GameOfDrones.Infrastructure.AssemblyInfo.cs
+D:\GitHub\UruIT\back-end\UruIT.GameOfDrones.Infrastructure\obj\Debug\netcoreapp2.2\UruIT.GameOfDrones.Infrastructure.csproj.CopyComplete
+D:\GitHub\UruIT\back-end\UruIT.GameOfDrones.Infrastructure\obj\Debug\netcoreapp2.2\UruIT.GameOfDrones.Infrastructure.dll
+D:\GitHub\UruIT\back-end\UruIT.GameOfDrones.Infrastructure\obj\Debug\netcoreapp2.2\UruIT.GameOfDrones.Infrastructure.pdb

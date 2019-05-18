@@ -7,9 +7,9 @@ namespace UruIT.GameOfDrones.Repository
 {
     public class PlayerRepository : IRepository<Player>
     {
-        readonly PlayerContext _playerContext;
+        readonly AssessmentContext _playerContext;
  
-        public PlayerRepository(PlayerContext context)
+        public PlayerRepository(AssessmentContext context)
         {
             _playerContext = context;
         }

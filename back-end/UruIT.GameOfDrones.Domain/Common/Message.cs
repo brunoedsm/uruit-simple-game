@@ -1,4 +1,4 @@
-namespace UruIT.GameOfDrones.Common
+namespace UruIT.GameOfDrones.Domain.Common
 {
     public class Message
     {

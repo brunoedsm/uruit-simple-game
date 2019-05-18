@@ -44,6 +44,10 @@
               "target": "Package",
               "version": "[2.0.3, )",
               "autoReferenced": true
+            },
+            "System.ComponentModel.Annotations": {
+              "target": "Package",
+              "version": "[4.4.0, )"
             }
           },
           "imports": [
@@ -96,6 +100,14 @@
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[2.2.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[2.2.4, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[2.2.0, )"
             },
             "NETStandard.Library": {
               "suppressParent": "All",

@@ -3,7 +3,7 @@ using UruIT.GameOfDrones.Domain.Entities;
 using System;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
-using UruIT.GameOfDrones.Common;
+using UruIT.GameOfDrones.Domain.Common;
 
 namespace UruIT.GameOfDrones.Domain.Contracts.Services
 {

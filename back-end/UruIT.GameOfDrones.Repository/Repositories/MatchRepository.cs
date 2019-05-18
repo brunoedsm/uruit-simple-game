@@ -7,9 +7,9 @@ namespace UruIT.GameOfDrones.Repository
 {
     public class MatchRepository : IRepository<Match>
     {
-        readonly MatchContext _matchContext;
+        readonly AssessmentContext _matchContext;
  
-        public MatchRepository(MatchContext context)
+        public MatchRepository(AssessmentContext context)
         {
             _matchContext = context;
         }

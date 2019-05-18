@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
 
-namespace UruIT.GameOfDrones.Common
+namespace UruIT.GameOfDrones.Domain.Common
 {
     public enum StatusResult
     {

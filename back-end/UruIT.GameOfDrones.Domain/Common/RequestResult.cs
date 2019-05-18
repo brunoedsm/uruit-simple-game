@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System;
 using System.Text;
 
-namespace UruIT.GameOfDrones.Common
+namespace UruIT.GameOfDrones.Domain.Common
 {
     public class RequestResult
     {

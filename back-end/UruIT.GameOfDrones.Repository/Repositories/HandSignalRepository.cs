@@ -7,9 +7,9 @@ namespace UruIT.GameOfDrones.Repository
 {
     public class HandSignalRepository : IRepository<HandSignal>
     {
-        readonly HandSignalContext _handSignalContext;
+        readonly AssessmentContext _handSignalContext;
  
-        public HandSignalRepository(HandSignalContext context)
+        public HandSignalRepository(AssessmentContext context)
         {
             _handSignalContext = context;
         }

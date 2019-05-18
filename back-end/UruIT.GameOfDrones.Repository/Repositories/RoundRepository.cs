@@ -7,9 +7,9 @@ namespace UruIT.GameOfDrones.Repository
 {
     public class RoundRepository : IRepository<Round>
     {
-        readonly RoundContext _roundContext;
+        readonly AssessmentContext _roundContext;
 
-        public RoundRepository(RoundContext context)
+        public RoundRepository(AssessmentContext context)
         {
             _roundContext = context;
         }
