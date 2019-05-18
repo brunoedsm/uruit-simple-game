@@ -1,13 +1,19 @@
 using System.Collections.Generic;
+using UruIT.GameOfDrones.Domain.Entities;
+using System;
+using System.Linq.Expressions;
+using System.Threading.Tasks;
+using UruIT.GameOfDrones.Common;
 
-namespace UruIT.GameOfDrones.Domain.Services
+namespace UruIT.GameOfDrones.Domain.Contracts.Services
 {
-    public interface IRepository<TEntity>
+    public interface IService<TEntity>
+      where TEntity : BaseEntity
     {
-        IEnumerable<TEntity> GetAll();
-        TEntity Get(long id);
-        void Add(TEntity entity);
-        void Update(TEntity dbEntity, TEntity entity);
-        void Delete(TEntity entity);
+        Task<RequestResult> GetAll();
+        Task<RequestResult> Get(long id);
+        Task<RequestResult> Add(TEntity entity);
+        Task<RequestResult> Update(TEntity dbEntity, TEntity entity);
+        Task<RequestResult> Delete(TEntity entity);
     }
 }

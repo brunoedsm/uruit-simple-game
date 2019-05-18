@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace UruIT.GameOfDrones.Domain.Repositories
+namespace UruIT.GameOfDrones.Domain.Contracts.Repositories
 {
     public interface IRepository<TEntity>
     {
