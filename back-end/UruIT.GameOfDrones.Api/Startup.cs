@@ -16,7 +16,7 @@ using UruIT.GameOfDrones.Domain.Contracts.Repositories;
 using UruIT.GameOfDrones.Repository;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.SqlServer;
-
+using Serilog.Extensions.Logging.File;
 
 namespace UruIT.GameOfDrones.Api
 {
@@ -35,8 +35,7 @@ namespace UruIT.GameOfDrones.Api
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
             /*Configs*/
-
-
+            
             /*Data Context*/
             services.AddDbContext<AssessmentContext>(opts => 
             opts.UseSqlServer(Configuration["ConnectionStrings:DefaultConnection"]
@@ -56,6 +55,7 @@ namespace UruIT.GameOfDrones.Api
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+            
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

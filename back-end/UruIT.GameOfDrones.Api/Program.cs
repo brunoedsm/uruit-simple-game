@@ -7,6 +7,7 @@ using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using Serilog.Extensions.Logging.File;
 
 namespace UruIT.GameOfDrones.Api
 {
@@ -24,6 +25,10 @@ namespace UruIT.GameOfDrones.Api
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args,IConfiguration config) =>
             WebHost.CreateDefaultBuilder(args)
+                .ConfigureLogging((hostingContext, builder) =>
+                {
+                    builder.AddFile("Logs/UruIT_GameOfDrones_Api-{Date}.txt");
+                })
                 .UseConfiguration(config)
                 .UseStartup<Startup>();
     }

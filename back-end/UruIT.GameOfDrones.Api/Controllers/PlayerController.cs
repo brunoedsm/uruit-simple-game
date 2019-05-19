@@ -6,61 +6,80 @@ using Microsoft.AspNetCore.Mvc;
 using UruIT.GameOfDrones.Domain.Entities;
 using UruIT.GameOfDrones.Business.Services;
 using UruIT.GameOfDrones.Domain.Contracts.Services;
+using UruIT.GameOfDrones.Domain.Common;
+using Microsoft.Extensions.Logging;
 
 namespace UruIT.GameOfDrones.Api.Controllers
 {
-    [Route("api/player")]
+    [Route("api/[controller]")]
     [ApiController]
     public class PlayerController : ControllerBase
     {
         private readonly IPlayerService _service;
-
-        public PlayerController(IPlayerService serviceDI)
+        private readonly ILogger<PlayerController> _log;
+        public PlayerController(IPlayerService serviceDI, ILogger<PlayerController> log)
         {
             _service = serviceDI;
+            _log = log;
         }
 
         // GET: api/Player
         [HttpGet]
         public async Task<IActionResult> Get()
         {
-            return Ok(await _service.GetAll());
+            return Prepare(await _service.GetAll());
         }
 
         // GET: api/Player/id
         [HttpGet]
-        [Route("[controller]/{id}")]
+        [Route("{id}")]
         public async Task<IActionResult> Get(long id)
         {
-            return Ok(await _service.Get(id));
+            return Prepare(await _service.Get(id));
         }
 
         // POST: api/Player
         [HttpPost]
         public async Task<IActionResult> Post([FromBody] Player player)
         {
-            return Ok(await _service.Add(player));
+            return Prepare(await _service.Add(player));
         }
 
         // PUT: api/Player/5
         [HttpPut]
-        [Route("[controller]/{id}")]
+        [Route("{id}")]
         public async Task<IActionResult> Put(long id, [FromBody] Player player)
         {
             Player entryToUpdate = (Player)_service.Get(id).Result.Data;
 
-            return Ok(await _service.Update(entryToUpdate, player));
+            return Prepare(await _service.Update(entryToUpdate, player));
         }
 
         // DELETE: api/Player/5
         [HttpDelete]
-        [Route("[controller]/{id}")]
+        [Route("{id}")]
         public async Task<IActionResult> Delete(long id)
         {
             Player player = (Player)_service.Get(id).Result.Data;
 
-            return Ok(await _service.Delete(player));
+            return Prepare(await _service.Delete(player));
+        }
+        private IActionResult Prepare(RequestResult result)
+        {
+            if (result.Status == StatusResult.Success)
+                return Ok(result);
+            else
+            {
+                var resource = string.Format("{0}/{1}", this.ControllerContext.RouteData.Values["controller"].ToString(),
+                                             this.ControllerContext.RouteData.Values["action"].ToString());
+                var messages = string.Empty;
+                foreach (var m in result.Messages)
+                {
+                    messages += m.Text + "\n";
+                }
+                _log.LogError(string.Format("Accessing: {0}, Status: {1}, Errors:{2}", resource, result.Status.ToString(), messages));
+                return new BadRequestObjectResult(result);
+            }
         }
     }
-
 }
