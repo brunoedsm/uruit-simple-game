@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RoundComponent implements OnInit {
 
+  public roundView = true;
   constructor() { }
 
   ngOnInit() {

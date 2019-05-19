@@ -1,3 +1,54 @@
-<p>
-  match works!
-</p>
+<div *ngIf="defaultView" class="container" style="border:1px solid #DCDCDC;">
+  <div *ngIf="moveOneVisible">
+    <div class="col-md-12" style="text-align:center;">
+      <h3>Round [name]</h3>
+    </div>
+    <div class="row">
+      <div class="col-md-12">[Player 1 Name]</div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-md-4">Select Move:</div>
+      <div class="col-md-8">
+        <select class="form-control">
+          <option>Scissor</option>
+        </select>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <button class="btn btn-success" (click)="selectMoveOne()">OK</button>
+      </div>
+    </div>
+    <br>
+  </div>
+  <div *ngIf="moveTwoVisible">
+    <div class="col-md-12" style="text-align:center;">
+      <h3>Round [name]</h3>
+    </div>
+    <div class="row">
+      <div class="col-md-12">[Player 2 Name]</div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-md-4">Select Move:</div>
+      <div class="col-md-8">
+        <select class="form-control">
+          <option>Scissor</option>
+        </select>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <button class="btn btn-success" (click)="selectMoveTwo()">OK</button>
+      </div>
+    </div>
+    <br>
+  </div>
+</div>
+<br>
+<div *ngIf="roundView" style="margin-left: 20%;margin-right: 20%;">
+  <app-round></app-round>
+</div>

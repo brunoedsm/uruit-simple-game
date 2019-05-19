@@ -21,7 +21,11 @@ import { RoundComponent } from './round/round.component';
     RouterModule.forRoot(
       [
         { path: '', component: AppComponent },
-        { path: 'match', component: MatchComponent }
+        { path: 'player', component: PlayerComponent },
+        { path: 'match', component: MatchComponent },
+        { path: 'round', component: RoundComponent },
+        { path: 'handsignal', component: HandsignalComponent }
+
       ]
     )
   ],

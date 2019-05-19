@@ -6,8 +6,15 @@ import { Component, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class AppComponent {
+  public play = false;
+  public playerView = false;
 
+  public handSignalView = false;
   constructor() { }
 
-  title = 'UruIT Jankenpon';
+  public start(): void {
+    this.play = true;
+    this.playerView = true;
+  }
+
 }
