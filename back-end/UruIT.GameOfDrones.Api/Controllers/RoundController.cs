@@ -11,6 +11,8 @@ using Microsoft.Extensions.Logging;
 
 namespace UruIT.GameOfDrones.Api.Controllers
 {
+    [Produces("application/json")]
+    [Consumes("application/json")]
     [Route("api/[controller]")]
     [ApiController]
     public class RoundController : ControllerBase
@@ -52,7 +54,7 @@ namespace UruIT.GameOfDrones.Api.Controllers
         {
             return Prepare(await _service.Filter(round));
         }
-        
+
         // PUT: api/Round/5
         [HttpPut]
         [Route("{id}")]

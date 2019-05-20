@@ -32,15 +32,14 @@ namespace UruIT.GameOfDrones.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-
             /*Configs*/
             services.ConfigureCors();
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             /*Data Context*/
-            services.AddDbContext<AssessmentContext>(opts => 
+            services.AddDbContext<AssessmentContext>(opts =>
             opts.UseSqlServer(Configuration["ConnectionStrings:DefaultConnection"]
             ));
-            /*Services*/    
+            /*Services*/
             services.AddScoped<IPlayerService, PlayerService>();
             services.AddScoped<IMatchService, MatchService>();
             services.AddScoped<IRoundService, RoundService>();
@@ -55,7 +54,7 @@ namespace UruIT.GameOfDrones.Api
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -64,7 +63,7 @@ namespace UruIT.GameOfDrones.Api
             {
                 app.UseHsts();
             }
-            
+            app.UseCors("CorsPolicy");  
             app.UseMvc();
         }
     }

@@ -60,6 +60,7 @@ namespace UruIT.GameOfDrones.Business.Services
 
             try
             {
+                entity.DataRegister = DateTime.Now;
                 _repository.Add(entity);
             }
             catch (Exception ex)

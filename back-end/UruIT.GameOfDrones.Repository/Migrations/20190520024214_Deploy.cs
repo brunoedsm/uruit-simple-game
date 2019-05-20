@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace UruIT.GameOfDrones.Repository.Migrations
 {
-    public partial class InitialMigration : Migration
+    public partial class Deploy : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -12,7 +12,7 @@ namespace UruIT.GameOfDrones.Repository.Migrations
                 name: "HandSignals",
                 columns: table => new
                 {
-                    Id = table.Column<int>(nullable: false)
+                    Id = table.Column<long>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     DataRegister = table.Column<DateTime>(nullable: false),
                     Description = table.Column<string>(nullable: true)
@@ -26,7 +26,7 @@ namespace UruIT.GameOfDrones.Repository.Migrations
                 name: "Matches",
                 columns: table => new
                 {
-                    Id = table.Column<int>(nullable: false)
+                    Id = table.Column<long>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     DataRegister = table.Column<DateTime>(nullable: false),
                     CurrentRound = table.Column<int>(nullable: false)
@@ -40,7 +40,7 @@ namespace UruIT.GameOfDrones.Repository.Migrations
                 name: "Players",
                 columns: table => new
                 {
-                    Id = table.Column<int>(nullable: false)
+                    Id = table.Column<long>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     DataRegister = table.Column<DateTime>(nullable: false),
                     Name = table.Column<string>(nullable: true)
@@ -54,7 +54,7 @@ namespace UruIT.GameOfDrones.Repository.Migrations
                 name: "Rounds",
                 columns: table => new
                 {
-                    Id = table.Column<int>(nullable: false)
+                    Id = table.Column<long>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     DataRegister = table.Column<DateTime>(nullable: false),
                     MatchId = table.Column<int>(nullable: false),

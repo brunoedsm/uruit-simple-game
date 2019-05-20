@@ -11,6 +11,8 @@ using Microsoft.Extensions.Logging;
 
 namespace UruIT.GameOfDrones.Api.Controllers
 {
+    [Produces("application/json")]
+    [Consumes("application/json")]
     [Route("api/[controller]")]
     [ApiController]
     public class HandSignalController : ControllerBase
@@ -51,7 +53,7 @@ namespace UruIT.GameOfDrones.Api.Controllers
         public async Task<IActionResult> Filter([FromBody] HandSignal handSignal)
         {
             return Prepare(await _service.Filter(handSignal));
-        }    
+        }
 
         // PUT: api/HandSignal/5
         [HttpPut]

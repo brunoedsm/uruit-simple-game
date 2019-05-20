@@ -10,8 +10,8 @@ using UruIT.GameOfDrones.Repository;
 namespace UruIT.GameOfDrones.Repository.Migrations
 {
     [DbContext(typeof(AssessmentContext))]
-    [Migration("20190518103803_InitialMigration")]
-    partial class InitialMigration
+    [Migration("20190520024214_Deploy")]
+    partial class Deploy
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -23,11 +23,12 @@ namespace UruIT.GameOfDrones.Repository.Migrations
 
             modelBuilder.Entity("UruIT.GameOfDrones.Domain.Entities.HandSignal", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<DateTime>("DataRegister");
+                    b.Property<DateTime>("DataRegister")
+                        .ValueGeneratedOnAddOrUpdate();
 
                     b.Property<string>("Description");
 
@@ -38,13 +39,14 @@ namespace UruIT.GameOfDrones.Repository.Migrations
 
             modelBuilder.Entity("UruIT.GameOfDrones.Domain.Entities.Match", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<int>("CurrentRound");
 
-                    b.Property<DateTime>("DataRegister");
+                    b.Property<DateTime>("DataRegister")
+                        .ValueGeneratedOnAddOrUpdate();
 
                     b.HasKey("Id");
 
@@ -53,11 +55,12 @@ namespace UruIT.GameOfDrones.Repository.Migrations
 
             modelBuilder.Entity("UruIT.GameOfDrones.Domain.Entities.Player", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<DateTime>("DataRegister");
+                    b.Property<DateTime>("DataRegister")
+                        .ValueGeneratedOnAddOrUpdate();
 
                     b.Property<string>("Name");
 
@@ -68,11 +71,12 @@ namespace UruIT.GameOfDrones.Repository.Migrations
 
             modelBuilder.Entity("UruIT.GameOfDrones.Domain.Entities.Round", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<DateTime>("DataRegister");
+                    b.Property<DateTime>("DataRegister")
+                        .ValueGeneratedOnAddOrUpdate();
 
                     b.Property<int>("HandSignalId");
 

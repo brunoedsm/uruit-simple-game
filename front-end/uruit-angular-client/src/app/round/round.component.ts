@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RestService } from '../rest.service';
 
 @Component({
   selector: 'app-round',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class RoundComponent implements OnInit {
 
   public roundView = true;
-  constructor() { }
+  constructor(public rest: RestService) { }
 
   ngOnInit() {
   }

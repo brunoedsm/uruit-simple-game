@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RestService } from '../rest.service';
 
 @Component({
   selector: 'app-handsignal',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HandsignalComponent implements OnInit {
 
-  constructor() { }
+  constructor(public rest: RestService) { }
 
   ngOnInit() {
   }

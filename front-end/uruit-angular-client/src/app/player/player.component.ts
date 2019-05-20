@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RestService } from '../rest.service';
 
 @Component({
   selector: 'app-player',
@@ -8,17 +9,34 @@ import { Component, OnInit } from '@angular/core';
 export class PlayerComponent implements OnInit {
   public playerView = true;
   public matchView = false;
-  constructor() { }
+  public player1Name = '';
+  public player2Name = '';
+
+  constructor(public rest: RestService) { }
 
   ngOnInit() {
 
   }
 
   public nextStep(): void {
-      /*todo: save players*/
-      /*todo: save match*/
-      this.playerView = false;
-      this.matchView = true;
+    /*save players*/
+    let p1: any = {
+      name: this.player1Name
+    };
+
+    this.rest.addPlayer(p1).subscribe((result1) => {
+      console.log(result1);
+      let p2: any = {
+        name: this.player2Name
+      };
+      this.rest.addPlayer(p2).subscribe((result2) => {
+        console.log(result2);
+      });
+    });
+
+    /*todo: save match*/
+    this.playerView = false;
+    this.matchView = true;
   }
 
 }

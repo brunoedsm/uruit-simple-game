@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RestService } from '../rest.service';
 
 @Component({
   selector: 'app-match',
@@ -10,7 +11,7 @@ export class MatchComponent implements OnInit {
   public roundView = false;
   public moveOneVisible = true;
   public moveTwoVisible = false;
-  constructor() { }
+  constructor(public rest: RestService) { }
 
   ngOnInit() {
     /*load match*/
