@@ -6,7 +6,7 @@ namespace  UruIT.GameOfDrones.Domain.Entities
     public class BaseEntity
     {
         [Key]
-        public int Id{get;set;}
+        public long Id{get;set;}
         public DateTime DataRegister{get;set;}
     }
 }
