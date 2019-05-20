@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Serilog.Extensions.Logging.File;
+using System.Net;
 
 namespace UruIT.GameOfDrones.Api
 {
@@ -19,12 +20,16 @@ namespace UruIT.GameOfDrones.Api
             .SetBasePath(Directory.GetCurrentDirectory())
             .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
             .Build();
-    
-            CreateWebHostBuilder(args,configuration).Build().Run();
+
+            CreateWebHostBuilder(args, configuration).Build().Run();
         }
 
-        public static IWebHostBuilder CreateWebHostBuilder(string[] args,IConfiguration config) =>
+        public static IWebHostBuilder CreateWebHostBuilder(string[] args, IConfiguration config) =>
             WebHost.CreateDefaultBuilder(args)
+                .UseKestrel(options =>
+                {
+                    options.Listen(IPAddress.Loopback, 5000); //HTTP port
+                })
                 .ConfigureLogging((hostingContext, builder) =>
                 {
                     builder.AddFile("Logs/UruIT_GameOfDrones_Api-{Date}.txt");

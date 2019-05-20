@@ -17,7 +17,7 @@ namespace UruIT.GameOfDrones.Api.Controllers
     {
         private readonly IRoundService _service;
         private readonly ILogger<RoundController> _log;
-        public RoundController(IRoundService serviceDI,ILogger<RoundController> log)
+        public RoundController(IRoundService serviceDI, ILogger<RoundController> log)
         {
             _service = serviceDI;
             _log = log;
@@ -45,6 +45,14 @@ namespace UruIT.GameOfDrones.Api.Controllers
             return Prepare(await _service.Add(round));
         }
 
+        // POST: api/Round/filter
+        [HttpPost]
+        [Route("filter")]
+        public async Task<IActionResult> Filter([FromBody] Round round)
+        {
+            return Prepare(await _service.Filter(round));
+        }
+        
         // PUT: api/Round/5
         [HttpPut]
         [Route("{id}")]

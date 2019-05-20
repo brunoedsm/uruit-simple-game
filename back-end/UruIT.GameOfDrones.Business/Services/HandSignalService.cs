@@ -7,6 +7,7 @@ using UruIT.GameOfDrones.Domain.Contracts.Services;
 using UruIT.GameOfDrones.Domain.Common;
 using UruIT.GameOfDrones.Domain.Contracts.Repositories;
 using UruIT.GameOfDrones.Repository;
+using System.Linq;
 
 namespace UruIT.GameOfDrones.Business.Services
 {
@@ -64,7 +65,7 @@ namespace UruIT.GameOfDrones.Business.Services
             {
                 result.Status = StatusResult.Danger;
                 result.Messages.Add(new Message(ex.Message));
-            }    
+            }
 
             return Task.FromResult(result);
         }
@@ -74,7 +75,7 @@ namespace UruIT.GameOfDrones.Business.Services
 
             try
             {
-                _repository.Update(dbEntity,entity);
+                _repository.Update(dbEntity, entity);
             }
             catch (Exception ex)
             {
@@ -101,5 +102,23 @@ namespace UruIT.GameOfDrones.Business.Services
             return Task.FromResult(result);
         }
 
+        public Task<RequestResult> Filter(HandSignal signal)
+        {
+            var result = new RequestResult(StatusResult.Success);
+
+            try
+            {
+                result.Data = _repository.GetAll().Where(x =>
+                    string.IsNullOrEmpty(signal.Description) || x.Description == signal.Description
+                );
+            }
+            catch (Exception ex)
+            {
+                result.Status = StatusResult.Danger;
+                result.Messages.Add(new Message(ex.Message));
+            }
+
+            return Task.FromResult(result);
+        }
     }
 }

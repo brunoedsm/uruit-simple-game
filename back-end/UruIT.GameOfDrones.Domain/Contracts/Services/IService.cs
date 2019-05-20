@@ -15,5 +15,6 @@ namespace UruIT.GameOfDrones.Domain.Contracts.Services
         Task<RequestResult> Add(TEntity entity);
         Task<RequestResult> Update(TEntity dbEntity, TEntity entity);
         Task<RequestResult> Delete(TEntity entity);
+        Task<RequestResult> Filter(TEntity entity);
     }
 }

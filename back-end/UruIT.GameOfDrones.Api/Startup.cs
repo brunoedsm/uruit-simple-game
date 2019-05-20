@@ -35,7 +35,7 @@ namespace UruIT.GameOfDrones.Api
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
             /*Configs*/
-            
+            services.ConfigureCors();
             /*Data Context*/
             services.AddDbContext<AssessmentContext>(opts => 
             opts.UseSqlServer(Configuration["ConnectionStrings:DefaultConnection"]
@@ -64,8 +64,7 @@ namespace UruIT.GameOfDrones.Api
             {
                 app.UseHsts();
             }
-
-            app.UseHttpsRedirection();
+            
             app.UseMvc();
         }
     }

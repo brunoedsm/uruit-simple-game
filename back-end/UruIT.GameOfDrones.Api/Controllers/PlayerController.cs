@@ -45,6 +45,14 @@ namespace UruIT.GameOfDrones.Api.Controllers
             return Prepare(await _service.Add(player));
         }
 
+        // POST: api/Player/filter
+        [HttpPost]
+        [Route("filter")]
+        public async Task<IActionResult> Filter([FromBody] Player player)
+        {
+            return Prepare(await _service.Filter(player));
+        }
+
         // PUT: api/Player/5
         [HttpPut]
         [Route("{id}")]

@@ -45,6 +45,14 @@ namespace UruIT.GameOfDrones.Api.Controllers
             return Prepare(await _service.Add(handSignal));
         }
 
+         // POST: api/HandSignal/filter
+        [HttpPost]
+        [Route("filter")]
+        public async Task<IActionResult> Filter([FromBody] HandSignal handSignal)
+        {
+            return Prepare(await _service.Filter(handSignal));
+        }    
+
         // PUT: api/HandSignal/5
         [HttpPut]
         [Route("{id}")]

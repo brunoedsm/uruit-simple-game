@@ -45,6 +45,14 @@ namespace UruIT.GameOfDrones.Api.Controllers
             return Prepare(await _service.Add(match));
         }
 
+        // POST: api/Match/filter
+        [HttpPost]
+        [Route("filter")]
+        public async Task<IActionResult> Filter([FromBody] Match match)
+        {
+            return Prepare(await _service.Filter(match));
+        }
+
         // PUT: api/Match/5
         [HttpPut]
         [Route("{id}")]
