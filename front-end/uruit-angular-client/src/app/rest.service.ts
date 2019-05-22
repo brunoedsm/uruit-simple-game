@@ -35,7 +35,7 @@ export class RestService {
   addPlayer(player): Observable<any> {
 
     return this.http.post<any>(endpoint + 'player', JSON.stringify(player), httpOptions).pipe(
-      tap((player) => console.log(`added player w/ id=${player.id}`)),
+      tap((player) => console.log(`added player`)),
       catchError(this.handleError<any>('addPlayer'))
     );
   }
@@ -49,14 +49,14 @@ export class RestService {
   updatePlayer(id, player): Observable<any> {
 
     return this.http.put(endpoint + 'player/' + id, JSON.stringify(player), httpOptions).pipe(
-      tap(_ => console.log(`updated player id=${id}`)),
+      tap(_ => console.log(`updated player`)),
       catchError(this.handleError<any>('updatePlayer'))
     );
   }
 
   deletePlayer(id): Observable<any> {
     return this.http.delete<any>(endpoint + 'player/' + id, httpOptions).pipe(
-      tap(_ => console.log(`deleted player id=${id}`)),
+      tap(_ => console.log(`deleted player`)),
       catchError(this.handleError<any>('deletePlayer'))
     );
   }
@@ -77,7 +77,7 @@ export class RestService {
   addMatch(match): Observable<any> {
 
     return this.http.post<any>(endpoint + 'match', JSON.stringify(match), httpOptions).pipe(
-      tap((match) => console.log(`added match w/ id=${match.id}`)),
+      tap((match) => console.log(`added match`)),
       catchError(this.handleError<any>('addMatch'))
     );
   }
@@ -90,14 +90,14 @@ export class RestService {
   updateMatch(id, match): Observable<any> {
 
     return this.http.put(endpoint + 'match/' + id, JSON.stringify(match), httpOptions).pipe(
-      tap(_ => console.log(`updated match id=${id}`)),
+      tap(_ => console.log(`updated match`)),
       catchError(this.handleError<any>('updateMatch'))
     );
   }
 
   deleteMatch(id): Observable<any> {
     return this.http.delete<any>(endpoint + 'match/' + id, httpOptions).pipe(
-      tap(_ => console.log(`deleted match id=${id}`)),
+      tap(_ => console.log(`deleted match`)),
       catchError(this.handleError<any>('deleteMatch'))
     );
   }
@@ -118,7 +118,7 @@ export class RestService {
   addRound(round): Observable<any> {
 
     return this.http.post<any>(endpoint + 'round', JSON.stringify(round), httpOptions).pipe(
-      tap((match) => console.log(`added round w/ id=${round.id}`)),
+      tap((match) => console.log(`added round`)),
       catchError(this.handleError<any>('addRound'))
     );
   }
@@ -131,14 +131,14 @@ export class RestService {
   updateRound(id, round): Observable<any> {
 
     return this.http.put(endpoint + 'round/' + id, JSON.stringify(round), httpOptions).pipe(
-      tap(_ => console.log(`updated round id=${id}`)),
+      tap(_ => console.log(`updated round`)),
       catchError(this.handleError<any>('updateRound'))
     );
   }
 
   deleteRound(id): Observable<any> {
     return this.http.delete<any>(endpoint + 'Round/' + id, httpOptions).pipe(
-      tap(_ => console.log(`deleted round id=${id}`)),
+      tap(_ => console.log(`deleted round`)),
       catchError(this.handleError<any>('deleteRound'))
     );
   }
@@ -159,7 +159,7 @@ export class RestService {
   addHandSignal(handSignal): Observable<any> {
 
     return this.http.post<any>(endpoint + 'handsignal', JSON.stringify(handSignal), httpOptions).pipe(
-      tap((match) => console.log(`added handSignal w/ id=${handSignal.id}`)),
+      tap((match) => console.log(`added handSignal`)),
       catchError(this.handleError<any>('addHandSignal'))
     );
   }
@@ -172,14 +172,14 @@ export class RestService {
   updateHandSignal(id, handSignal): Observable<any> {
 
     return this.http.put(endpoint + 'handsignal/' + id, JSON.stringify(handSignal), httpOptions).pipe(
-      tap(_ => console.log(`updated handSignal id=${id}`)),
+      tap(_ => console.log(`updated handSignal`)),
       catchError(this.handleError<any>('updateHandSignal'))
     );
   }
 
   deleteHandSignal(id): Observable<any> {
     return this.http.delete<any>(endpoint + 'handsignal/' + id, httpOptions).pipe(
-      tap(_ => console.log(`deleted handSignal id=${id}`)),
+      tap(_ => console.log(`deleted handSignal`)),
       catchError(this.handleError<any>('deleteHandSignal'))
     );
   }
