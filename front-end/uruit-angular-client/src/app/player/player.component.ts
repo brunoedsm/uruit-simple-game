@@ -32,7 +32,7 @@ export class PlayerComponent implements OnInit {
     this.rest.addPlayer(this.p1).subscribe((result1) => {
       if (result1.status === ResponseStatus.Success) {
         this.rest.filterPlayer(this.p1).subscribe((res) => {
-          localStorage.setItem('player1', JSON.stringify(res.data));
+          localStorage.setItem('player1', JSON.stringify(res.data[0]));
         });
         /*save player 2*/
         this.saveNextPlayer();
@@ -47,7 +47,7 @@ export class PlayerComponent implements OnInit {
     this.rest.addPlayer(this.p2).subscribe((result2) => {
       if (result2.status === ResponseStatus.Success) {
         this.rest.filterPlayer(this.p2).subscribe((res) => {
-          localStorage.setItem('player2', JSON.stringify(res.data));
+          localStorage.setItem('player2', JSON.stringify(res.data[0]));
         });
         /*save match to play*/
         this.saveMatch();
@@ -62,7 +62,7 @@ export class PlayerComponent implements OnInit {
     this.rest.addMatch(this.match).subscribe((result3) => {
       if (result3.status === ResponseStatus.Success) {
         this.rest.filterMatch(this.match).subscribe((res) => {
-          localStorage.setItem('match', JSON.stringify(res.data));
+          localStorage.setItem('match', JSON.stringify(res.data[0]));
           this.playerView = false;
           this.matchView = true;
         });

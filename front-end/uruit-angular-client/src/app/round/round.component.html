@@ -11,14 +11,10 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>1</td>
-          <td>Player 1</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Player 2</td>
-        </tr>
+        <tr *ngFor="let round of rounds">
+          <td>{{ idx + 1}}</td>
+          <td>{{ round.winnerId == 0 ? 'Draw' : (round.winnerId == p1.id ? p1.name : p2.name)}}</td>
+        </tr>        
       </tbody>
     </table>
   </div>
