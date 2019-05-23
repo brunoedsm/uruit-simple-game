@@ -15,12 +15,14 @@ export class MatchComponent implements OnInit {
   public p1: any;
   public p2: any;
   public match: any;
+  public handSignals: any;
 
   constructor(public rest: RestService) { }
 
   ngOnInit() {
     this.loadPlayers();
     this.loadMatch();
+    this.loadHandSignals();
     this.moveOneVisible = true;
   }
 
@@ -47,4 +49,9 @@ export class MatchComponent implements OnInit {
     console.log(this.p2);
   }
 
+  public loadHandSignals(): void{
+    this.rest.getHandSignal().subscribe((res) => {
+         this.handSignals = res.data;
+    });
+  }
 }

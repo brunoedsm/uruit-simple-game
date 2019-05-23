@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { map, catchError, tap } from 'rxjs/operators';
+import { AlertsService } from 'angular-alert-module';
 
 const endpoint = 'http://localhost:5000/api/';
 const httpOptions = {
@@ -15,7 +16,7 @@ const httpOptions = {
 })
 export class RestService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private alerts: AlertsService) { }
 
   private extractData(res: Response) {
     let body = res;
@@ -189,12 +190,9 @@ export class RestService {
   private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
       console.error(error);
-      console.log(`${operation} failed: ${error.message}`);
+      this.alerts.setMessage(error.message,'error');
+      this.alerts.setDefaults('timeout',100000);
       return of(result as T);
     };
   }
-
-
-
-
 }

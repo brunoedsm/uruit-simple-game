@@ -1,17 +1,17 @@
 <div *ngIf="defaultView" class="container" style="border:1px solid #DCDCDC;">
   <div *ngIf="moveOneVisible">
     <div class="col-md-12" style="text-align:center;">
-      <h3>Round [name]</h3>
+      <h3>Round {{match.currentRound}}</h3>
     </div>
     <div class="row">
-      <div class="col-md-12">[Player 1 Name]</div>
+      <div class="col-md-12">{{p1.name}}</div>
     </div>
     <br>
     <div class="row">
       <div class="col-md-4">Select Move:</div>
       <div class="col-md-8">
-        <select class="form-control">
-          <option>Scissor</option>
+        <select [(ngModel)]="p1selectedHand" class="form-control">
+          <option *ngFor="let h of handSignals" [ngValue]="h.id">{{h.Description}}</option>
         </select>
       </div>
     </div>
@@ -25,17 +25,17 @@
   </div>
   <div *ngIf="moveTwoVisible">
     <div class="col-md-12" style="text-align:center;">
-      <h3>Round [name]</h3>
+      <h3>{{match.currentRound}}</h3>
     </div>
     <div class="row">
-      <div class="col-md-12">[Player 2 Name]</div>
+      <div class="col-md-12">{{p2.name}}</div>
     </div>
     <br>
     <div class="row">
       <div class="col-md-4">Select Move:</div>
       <div class="col-md-8">
-        <select class="form-control">
-          <option>Scissor</option>
+        <select [(ngModel)]="p2selectedHand" class="form-control">
+          <option *ngFor="let h of handSignals" [ngValue]="h.id">{{h.Description}}</option>
         </select>
       </div>
     </div>

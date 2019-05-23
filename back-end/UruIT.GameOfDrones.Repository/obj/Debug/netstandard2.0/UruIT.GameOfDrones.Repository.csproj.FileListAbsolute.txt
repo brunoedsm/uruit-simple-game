@@ -10,3 +10,15 @@ D:\GitHub\UruIT\back-end\UruIT.GameOfDrones.Repository\bin\Debug\netstandard2.0\
 D:\GitHub\UruIT\back-end\UruIT.GameOfDrones.Repository\obj\Debug\netstandard2.0\UruIT.GameOfDrones.Repository.csproj.CopyComplete
 D:\GitHub\UruIT\back-end\UruIT.GameOfDrones.Repository\obj\Debug\netstandard2.0\UruIT.GameOfDrones.Repository.dll
 D:\GitHub\UruIT\back-end\UruIT.GameOfDrones.Repository\obj\Debug\netstandard2.0\UruIT.GameOfDrones.Repository.pdb
+C:\PersonalGitHub\UruIT\back-end\UruIT.GameOfDrones.Repository\bin\Debug\netstandard2.0\UruIT.GameOfDrones.Repository.deps.json
+C:\PersonalGitHub\UruIT\back-end\UruIT.GameOfDrones.Repository\bin\Debug\netstandard2.0\UruIT.GameOfDrones.Repository.dll
+C:\PersonalGitHub\UruIT\back-end\UruIT.GameOfDrones.Repository\bin\Debug\netstandard2.0\UruIT.GameOfDrones.Repository.pdb
+C:\PersonalGitHub\UruIT\back-end\UruIT.GameOfDrones.Repository\bin\Debug\netstandard2.0\UruIT.GameOfDrones.Domain.dll
+C:\PersonalGitHub\UruIT\back-end\UruIT.GameOfDrones.Repository\bin\Debug\netstandard2.0\UruIT.GameOfDrones.Domain.pdb
+C:\PersonalGitHub\UruIT\back-end\UruIT.GameOfDrones.Repository\obj\Debug\netstandard2.0\UruIT.GameOfDrones.Repository.csprojAssemblyReference.cache
+C:\PersonalGitHub\UruIT\back-end\UruIT.GameOfDrones.Repository\obj\Debug\netstandard2.0\UruIT.GameOfDrones.Repository.csproj.CoreCompileInputs.cache
+C:\PersonalGitHub\UruIT\back-end\UruIT.GameOfDrones.Repository\obj\Debug\netstandard2.0\UruIT.GameOfDrones.Repository.AssemblyInfoInputs.cache
+C:\PersonalGitHub\UruIT\back-end\UruIT.GameOfDrones.Repository\obj\Debug\netstandard2.0\UruIT.GameOfDrones.Repository.AssemblyInfo.cs
+C:\PersonalGitHub\UruIT\back-end\UruIT.GameOfDrones.Repository\obj\Debug\netstandard2.0\UruIT.GameOfDrones.Repository.csproj.CopyComplete
+C:\PersonalGitHub\UruIT\back-end\UruIT.GameOfDrones.Repository\obj\Debug\netstandard2.0\UruIT.GameOfDrones.Repository.dll
+C:\PersonalGitHub\UruIT\back-end\UruIT.GameOfDrones.Repository\obj\Debug\netstandard2.0\UruIT.GameOfDrones.Repository.pdb

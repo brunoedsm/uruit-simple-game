@@ -12,3 +12,17 @@ D:\GitHub\UruIT\back-end\UruIT.GameOfDrones.Business\bin\Debug\netstandard2.0\Ur
 D:\GitHub\UruIT\back-end\UruIT.GameOfDrones.Business\obj\Debug\netstandard2.0\UruIT.GameOfDrones.Business.csproj.CopyComplete
 D:\GitHub\UruIT\back-end\UruIT.GameOfDrones.Business\obj\Debug\netstandard2.0\UruIT.GameOfDrones.Business.dll
 D:\GitHub\UruIT\back-end\UruIT.GameOfDrones.Business\obj\Debug\netstandard2.0\UruIT.GameOfDrones.Business.pdb
+C:\PersonalGitHub\UruIT\back-end\UruIT.GameOfDrones.Business\bin\Debug\netstandard2.0\UruIT.GameOfDrones.Business.deps.json
+C:\PersonalGitHub\UruIT\back-end\UruIT.GameOfDrones.Business\bin\Debug\netstandard2.0\UruIT.GameOfDrones.Business.dll
+C:\PersonalGitHub\UruIT\back-end\UruIT.GameOfDrones.Business\bin\Debug\netstandard2.0\UruIT.GameOfDrones.Business.pdb
+C:\PersonalGitHub\UruIT\back-end\UruIT.GameOfDrones.Business\bin\Debug\netstandard2.0\UruIT.GameOfDrones.Domain.dll
+C:\PersonalGitHub\UruIT\back-end\UruIT.GameOfDrones.Business\bin\Debug\netstandard2.0\UruIT.GameOfDrones.Repository.dll
+C:\PersonalGitHub\UruIT\back-end\UruIT.GameOfDrones.Business\bin\Debug\netstandard2.0\UruIT.GameOfDrones.Domain.pdb
+C:\PersonalGitHub\UruIT\back-end\UruIT.GameOfDrones.Business\bin\Debug\netstandard2.0\UruIT.GameOfDrones.Repository.pdb
+C:\PersonalGitHub\UruIT\back-end\UruIT.GameOfDrones.Business\obj\Debug\netstandard2.0\UruIT.GameOfDrones.Business.csprojAssemblyReference.cache
+C:\PersonalGitHub\UruIT\back-end\UruIT.GameOfDrones.Business\obj\Debug\netstandard2.0\UruIT.GameOfDrones.Business.csproj.CoreCompileInputs.cache
+C:\PersonalGitHub\UruIT\back-end\UruIT.GameOfDrones.Business\obj\Debug\netstandard2.0\UruIT.GameOfDrones.Business.AssemblyInfoInputs.cache
+C:\PersonalGitHub\UruIT\back-end\UruIT.GameOfDrones.Business\obj\Debug\netstandard2.0\UruIT.GameOfDrones.Business.AssemblyInfo.cs
+C:\PersonalGitHub\UruIT\back-end\UruIT.GameOfDrones.Business\obj\Debug\netstandard2.0\UruIT.GameOfDrones.Business.csproj.CopyComplete
+C:\PersonalGitHub\UruIT\back-end\UruIT.GameOfDrones.Business\obj\Debug\netstandard2.0\UruIT.GameOfDrones.Business.dll
+C:\PersonalGitHub\UruIT\back-end\UruIT.GameOfDrones.Business\obj\Debug\netstandard2.0\UruIT.GameOfDrones.Business.pdb

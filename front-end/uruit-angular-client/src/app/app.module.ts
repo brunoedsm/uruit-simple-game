@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { AlertsModule } from 'angular-alert-module';
 
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
@@ -22,6 +23,7 @@ import { RoundComponent } from './round/round.component';
     BrowserModule,
     FormsModule,
     HttpClientModule,
+    AlertsModule.forRoot(),
     RouterModule.forRoot(
       [
         { path: '', component: AppComponent },
