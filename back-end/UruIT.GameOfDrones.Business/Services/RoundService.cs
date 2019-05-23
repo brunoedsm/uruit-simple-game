@@ -111,6 +111,9 @@ namespace UruIT.GameOfDrones.Business.Services
                     round.MatchId > 0 || x.MatchId == round.MatchId
                 && round.PlayerId > 0 || x.PlayerId == round.PlayerId
                 && round.HandSignalId > 0 || x.HandSignalId == round.HandSignalId
+                && round.SecondPlayerId >0 || x.SecondPlayerId == round.SecondPlayerId
+                && round.SecondHandSignalId > 0 || x.SecondHandSignalId == round.SecondHandSignalId
+                && round.WinnerId > 0 || x.WinnerId == round.WinnerId
                 );
             }
             catch (Exception ex)

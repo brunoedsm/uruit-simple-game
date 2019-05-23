@@ -36,6 +36,9 @@ namespace UruIT.GameOfDrones.Repository
             round.MatchId = entity.MatchId;
             round.PlayerId = entity.PlayerId;
             round.HandSignalId = entity.HandSignalId;
+            round.SecondPlayerId = entity.SecondPlayerId;
+            round.SecondHandSignalId = entity.SecondHandSignalId;
+            round.WinnerId = entity.WinnerId; 
             _roundContext.SaveChanges();
         }
 
