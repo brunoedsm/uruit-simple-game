@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace UruIT.GameOfDrones.Repository.Migrations
 {
-    public partial class Deploy : Migration
+    public partial class UruITDataBase : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -29,6 +29,7 @@ namespace UruIT.GameOfDrones.Repository.Migrations
                     Id = table.Column<long>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     DataRegister = table.Column<DateTime>(nullable: false),
+                    HashId = table.Column<string>(nullable: true),
                     CurrentRound = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
@@ -59,12 +60,30 @@ namespace UruIT.GameOfDrones.Repository.Migrations
                     DataRegister = table.Column<DateTime>(nullable: false),
                     MatchId = table.Column<int>(nullable: false),
                     PlayerId = table.Column<int>(nullable: false),
-                    HandSignalId = table.Column<int>(nullable: false)
+                    HandSignalId = table.Column<int>(nullable: false),
+                    SecondPlayerId = table.Column<int>(nullable: false),
+                    SecondHandSignalId = table.Column<int>(nullable: false),
+                    WinnerId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Rounds", x => x.Id);
                 });
+
+            migrationBuilder.InsertData(
+                table: "HandSignals",
+                columns: new[] { "Id", "DataRegister", "Description" },
+                values: new object[] { 1L, new DateTime(2019, 5, 23, 23, 16, 13, 592, DateTimeKind.Local).AddTicks(4401), "Paper" });
+
+            migrationBuilder.InsertData(
+                table: "HandSignals",
+                columns: new[] { "Id", "DataRegister", "Description" },
+                values: new object[] { 2L, new DateTime(2019, 5, 23, 23, 16, 13, 594, DateTimeKind.Local).AddTicks(1249), "Rock" });
+
+            migrationBuilder.InsertData(
+                table: "HandSignals",
+                columns: new[] { "Id", "DataRegister", "Description" },
+                values: new object[] { 3L, new DateTime(2019, 5, 23, 23, 16, 13, 594, DateTimeKind.Local).AddTicks(1487), "Scissor" });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

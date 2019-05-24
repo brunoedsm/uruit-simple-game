@@ -1,0 +1,8 @@
+-- To revert migration changes
+dotnet ef database update 0 --startup-project [project name]
+-- To delete migrations (one per command)
+dotnet ef migrations remove --startup-project [project name]
+-- To add migration
+dotnet ef migrations add Development --startup-project [project name]
+-- To apply migration on database
+dotnet ef database update Development --startup-project [project-name]

@@ -10,8 +10,8 @@ using UruIT.GameOfDrones.Repository;
 namespace UruIT.GameOfDrones.Repository.Migrations
 {
     [DbContext(typeof(AssessmentContext))]
-    [Migration("20190520024214_Deploy")]
-    partial class Deploy
+    [Migration("20190524021613_UruITDataBase")]
+    partial class UruITDataBase
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -27,14 +27,33 @@ namespace UruIT.GameOfDrones.Repository.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<DateTime>("DataRegister")
-                        .ValueGeneratedOnAddOrUpdate();
+                    b.Property<DateTime>("DataRegister");
 
                     b.Property<string>("Description");
 
                     b.HasKey("Id");
 
                     b.ToTable("HandSignals");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1L,
+                            DataRegister = new DateTime(2019, 5, 23, 23, 16, 13, 592, DateTimeKind.Local).AddTicks(4401),
+                            Description = "Paper"
+                        },
+                        new
+                        {
+                            Id = 2L,
+                            DataRegister = new DateTime(2019, 5, 23, 23, 16, 13, 594, DateTimeKind.Local).AddTicks(1249),
+                            Description = "Rock"
+                        },
+                        new
+                        {
+                            Id = 3L,
+                            DataRegister = new DateTime(2019, 5, 23, 23, 16, 13, 594, DateTimeKind.Local).AddTicks(1487),
+                            Description = "Scissor"
+                        });
                 });
 
             modelBuilder.Entity("UruIT.GameOfDrones.Domain.Entities.Match", b =>
@@ -45,8 +64,9 @@ namespace UruIT.GameOfDrones.Repository.Migrations
 
                     b.Property<int>("CurrentRound");
 
-                    b.Property<DateTime>("DataRegister")
-                        .ValueGeneratedOnAddOrUpdate();
+                    b.Property<DateTime>("DataRegister");
+
+                    b.Property<string>("HashId");
 
                     b.HasKey("Id");
 
@@ -59,8 +79,7 @@ namespace UruIT.GameOfDrones.Repository.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<DateTime>("DataRegister")
-                        .ValueGeneratedOnAddOrUpdate();
+                    b.Property<DateTime>("DataRegister");
 
                     b.Property<string>("Name");
 
@@ -75,14 +94,19 @@ namespace UruIT.GameOfDrones.Repository.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<DateTime>("DataRegister")
-                        .ValueGeneratedOnAddOrUpdate();
+                    b.Property<DateTime>("DataRegister");
 
                     b.Property<int>("HandSignalId");
 
                     b.Property<int>("MatchId");
 
                     b.Property<int>("PlayerId");
+
+                    b.Property<int>("SecondHandSignalId");
+
+                    b.Property<int>("SecondPlayerId");
+
+                    b.Property<int>("WinnerId");
 
                     b.HasKey("Id");
 

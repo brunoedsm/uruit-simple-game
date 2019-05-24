@@ -37,19 +37,19 @@ namespace UruIT.GameOfDrones.Repository.Migrations
                         new
                         {
                             Id = 1L,
-                            DataRegister = new DateTime(2019, 5, 23, 7, 23, 15, 229, DateTimeKind.Local).AddTicks(7976),
+                            DataRegister = new DateTime(2019, 5, 23, 23, 16, 13, 592, DateTimeKind.Local).AddTicks(4401),
                             Description = "Paper"
                         },
                         new
                         {
                             Id = 2L,
-                            DataRegister = new DateTime(2019, 5, 23, 7, 23, 15, 235, DateTimeKind.Local).AddTicks(7170),
+                            DataRegister = new DateTime(2019, 5, 23, 23, 16, 13, 594, DateTimeKind.Local).AddTicks(1249),
                             Description = "Rock"
                         },
                         new
                         {
                             Id = 3L,
-                            DataRegister = new DateTime(2019, 5, 23, 7, 23, 15, 235, DateTimeKind.Local).AddTicks(7596),
+                            DataRegister = new DateTime(2019, 5, 23, 23, 16, 13, 594, DateTimeKind.Local).AddTicks(1487),
                             Description = "Scissor"
                         });
                 });
@@ -63,6 +63,8 @@ namespace UruIT.GameOfDrones.Repository.Migrations
                     b.Property<int>("CurrentRound");
 
                     b.Property<DateTime>("DataRegister");
+
+                    b.Property<string>("HashId");
 
                     b.HasKey("Id");
 

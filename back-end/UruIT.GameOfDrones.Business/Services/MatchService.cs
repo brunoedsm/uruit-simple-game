@@ -111,7 +111,8 @@ namespace UruIT.GameOfDrones.Business.Services
             try
             {
                 result.Data = _repository.GetAll().Where(x =>
-                    match.CurrentRound > 0 || x.CurrentRound == match.CurrentRound
+                    match.CurrentRound == 0 || x.CurrentRound == match.CurrentRound
+                    && string.IsNullOrEmpty(match.HashId) || x.HashId == match.HashId
                 );
             }
             catch (Exception ex)

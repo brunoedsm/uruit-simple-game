@@ -13,6 +13,7 @@ export class AppComponent {
   constructor() { }
 
   public start(): void {
+    console.clear();
     this.play = true;
     this.playerView = true;
   }

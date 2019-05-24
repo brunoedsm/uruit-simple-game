@@ -1,16 +1,16 @@
-<div *ngIf="p1" class="container" style="border:1px solid #DCDCDC;">
+<div *ngIf="match" class="container" style="border:1px solid #DCDCDC;">
   <div *ngIf="moveOneVisible">
     <div class="col-md-12" style="text-align:center;">
       <h3>Round {{match.currentRound}}</h3>
     </div>
     <div class="row">
-      <div class="col-md-12">{{p1.name.toString()}}</div>
+      <div class="col-md-12"><b>{{p1.name}}</b></div>
     </div>
     <br>
     <div class="row">
       <div class="col-md-4">Select Move:</div>
       <div class="col-md-8">
-        <select [(ngModel)]="p1selectedHand" class="form-control">
+        <select [(ngModel)]="p1selectedHand" class="form-control" required>
           <option *ngFor="let h of handSignals" [ngValue]="h">{{h.description}}</option>
         </select>
       </div>
@@ -28,13 +28,13 @@
       <h3>Round {{match.currentRound}}</h3>
     </div>
     <div class="row">
-      <div class="col-md-12">{{p2.name}}</div>
+      <div class="col-md-12"><b>{{p2.name}}</b></div>
     </div>
     <br>
     <div class="row">
       <div class="col-md-4">Select Move:</div>
       <div class="col-md-8">
-        <select [(ngModel)]="p2selectedHand" class="form-control">
+        <select [(ngModel)]="p2selectedHand" class="form-control" required>
           <option *ngFor="let h of handSignals" [ngValue]="h">{{h.description}}</option>
         </select>
       </div>
@@ -48,15 +48,40 @@
     <br>
   </div>
   <div *ngIf="winnerName">
-    <div class="col-md-12 text-center">
+    <div *ngIf="winnerName !== 'Draw'" class="col-md-12 text-center">
       <h4>We have a WINNER!!</h4>
     </div>
-    <div class="col-md-12 text-center">
+    <div *ngIf="winnerName !== 'Draw'" class="col-md-12 text-center">
       <p>{{winnerName}} is the new EMPEROR!</p>
     </div>
+    <div *ngIf="winnerName === 'Draw'" class="col-md-12 text-center">
+      <p>Unfortunately, {{winnerName}} is the result of the match. Let's play again!</p>
+    </div>
+    <div class="col-md-12 text-center">
+       <button class="btn btn-danger" onclick="javascript:window.location.reload(true);">Play Again</button>
+    </div><br/>
   </div>
 </div>
 <br>
-<div *ngIf="roundView" style="margin-left: 20%;margin-right: 20%;">
-  <app-round></app-round>
+<div *ngIf="roundView" class="container" style="border:1px solid #DCDCDC;">
+  <div class="col-md-12 text-center">
+    <h6>Score</h6>
+  </div>
+  <div class="col-md-12 text-center" *ngIf="rounds">
+    <table style="width:100%">
+      <thead>
+        <tr>
+          <th>Round</th>
+          <th>Winner</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let round of rounds;index as idx">
+          <td>{{ idx + 1}}</td>
+          <td>{{ round.winnerId == 0 ? 'Draw' : (round.winnerId == p1.id ? p1.name : p2.name)}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
+

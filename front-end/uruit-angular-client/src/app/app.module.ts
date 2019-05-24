@@ -9,15 +9,13 @@ import { RouterModule } from '@angular/router';
 import { MatchComponent } from './match/match.component';
 import { PlayerComponent } from './player/player.component';
 import { HandsignalComponent } from './handsignal/handsignal.component';
-import { RoundComponent } from './round/round.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MatchComponent,
     PlayerComponent,
-    HandsignalComponent,
-    RoundComponent
+    HandsignalComponent
   ],
   imports: [
     BrowserModule,
@@ -29,9 +27,7 @@ import { RoundComponent } from './round/round.component';
         { path: '', component: AppComponent },
         { path: 'player', component: PlayerComponent },
         { path: 'match', component: MatchComponent },
-        { path: 'round', component: RoundComponent },
         { path: 'handsignal', component: HandsignalComponent }
-
       ]
     )
   ],

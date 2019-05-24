@@ -8,7 +8,7 @@ import { RestService } from '../rest.service';
 })
 export class HandsignalComponent implements OnInit {
 
-  constructor(public rest: RestService) { }
+  constructor(private rest: RestService) { }
 
   ngOnInit() {
   }

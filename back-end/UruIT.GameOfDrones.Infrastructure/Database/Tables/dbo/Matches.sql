@@ -1,6 +1,8 @@
--- Drop table
-
--- DROP TABLE AssessmentDB.dbo.Matches GO
+IF EXISTS (SELECT * FROM dbo.sysobjects where id = object_id(N'dbo.[Matches]') and OBJECTPROPERTY(id, N'IsTable') = 1)
+	BEGIN
+		 DROP TABLE AssessmentDB.dbo.Matches
+	END
+GO
 
 CREATE TABLE AssessmentDB.dbo.Matches (
 	Id int IDENTITY(1,1) NOT NULL,

@@ -1,43 +1,41 @@
 {
   "format": 1,
   "restore": {
-    "C:\\PersonalGitHub\\UruIT\\back-end\\UruIT.GameOfDrones.Api\\UruIT.GameOfDrones.Api.csproj": {}
+    "D:\\GitHub\\UruIT\\back-end\\UruIT.GameOfDrones.Api\\UruIT.GameOfDrones.Api.csproj": {}
   },
   "projects": {
-    "C:\\PersonalGitHub\\UruIT\\back-end\\UruIT.GameOfDrones.Api\\UruIT.GameOfDrones.Api.csproj": {
+    "D:\\GitHub\\UruIT\\back-end\\UruIT.GameOfDrones.Api\\UruIT.GameOfDrones.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\PersonalGitHub\\UruIT\\back-end\\UruIT.GameOfDrones.Api\\UruIT.GameOfDrones.Api.csproj",
+        "projectUniqueName": "D:\\GitHub\\UruIT\\back-end\\UruIT.GameOfDrones.Api\\UruIT.GameOfDrones.Api.csproj",
         "projectName": "UruIT.GameOfDrones.Api",
-        "projectPath": "C:\\PersonalGitHub\\UruIT\\back-end\\UruIT.GameOfDrones.Api\\UruIT.GameOfDrones.Api.csproj",
-        "packagesPath": "C:\\Users\\bruno.monteiro\\.nuget\\packages\\",
-        "outputPath": "C:\\PersonalGitHub\\UruIT\\back-end\\UruIT.GameOfDrones.Api\\obj\\",
+        "projectPath": "D:\\GitHub\\UruIT\\back-end\\UruIT.GameOfDrones.Api\\UruIT.GameOfDrones.Api.csproj",
+        "packagesPath": "C:\\Users\\bruno\\.nuget\\packages\\",
+        "outputPath": "D:\\GitHub\\UruIT\\back-end\\UruIT.GameOfDrones.Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\bruno.monteiro\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\bruno\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.2"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "C:\\PersonalGitHub\\UruIT\\back-end\\UruIT.GameOfDrones.Business\\UruIT.GameOfDrones.Business.csproj": {
-                "projectPath": "C:\\PersonalGitHub\\UruIT\\back-end\\UruIT.GameOfDrones.Business\\UruIT.GameOfDrones.Business.csproj"
+              "D:\\GitHub\\UruIT\\back-end\\UruIT.GameOfDrones.Business\\UruIT.GameOfDrones.Business.csproj": {
+                "projectPath": "D:\\GitHub\\UruIT\\back-end\\UruIT.GameOfDrones.Business\\UruIT.GameOfDrones.Business.csproj"
               },
-              "C:\\PersonalGitHub\\UruIT\\back-end\\UruIT.GameOfDrones.Domain\\UruIT.GameOfDrones.Domain.csproj": {
-                "projectPath": "C:\\PersonalGitHub\\UruIT\\back-end\\UruIT.GameOfDrones.Domain\\UruIT.GameOfDrones.Domain.csproj"
+              "D:\\GitHub\\UruIT\\back-end\\UruIT.GameOfDrones.Domain\\UruIT.GameOfDrones.Domain.csproj": {
+                "projectPath": "D:\\GitHub\\UruIT\\back-end\\UruIT.GameOfDrones.Domain\\UruIT.GameOfDrones.Domain.csproj"
               },
-              "C:\\PersonalGitHub\\UruIT\\back-end\\UruIT.GameOfDrones.Repository\\UruIT.GameOfDrones.Repository.csproj": {
-                "projectPath": "C:\\PersonalGitHub\\UruIT\\back-end\\UruIT.GameOfDrones.Repository\\UruIT.GameOfDrones.Repository.csproj"
+              "D:\\GitHub\\UruIT\\back-end\\UruIT.GameOfDrones.Repository\\UruIT.GameOfDrones.Repository.csproj": {
+                "projectPath": "D:\\GitHub\\UruIT\\back-end\\UruIT.GameOfDrones.Repository\\UruIT.GameOfDrones.Repository.csproj"
               }
             }
           }
@@ -87,37 +85,35 @@
         }
       }
     },
-    "C:\\PersonalGitHub\\UruIT\\back-end\\UruIT.GameOfDrones.Business\\UruIT.GameOfDrones.Business.csproj": {
+    "D:\\GitHub\\UruIT\\back-end\\UruIT.GameOfDrones.Business\\UruIT.GameOfDrones.Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\PersonalGitHub\\UruIT\\back-end\\UruIT.GameOfDrones.Business\\UruIT.GameOfDrones.Business.csproj",
+        "projectUniqueName": "D:\\GitHub\\UruIT\\back-end\\UruIT.GameOfDrones.Business\\UruIT.GameOfDrones.Business.csproj",
         "projectName": "UruIT.GameOfDrones.Business",
-        "projectPath": "C:\\PersonalGitHub\\UruIT\\back-end\\UruIT.GameOfDrones.Business\\UruIT.GameOfDrones.Business.csproj",
-        "packagesPath": "C:\\Users\\bruno.monteiro\\.nuget\\packages\\",
-        "outputPath": "C:\\PersonalGitHub\\UruIT\\back-end\\UruIT.GameOfDrones.Business\\obj\\",
+        "projectPath": "D:\\GitHub\\UruIT\\back-end\\UruIT.GameOfDrones.Business\\UruIT.GameOfDrones.Business.csproj",
+        "packagesPath": "C:\\Users\\bruno\\.nuget\\packages\\",
+        "outputPath": "D:\\GitHub\\UruIT\\back-end\\UruIT.GameOfDrones.Business\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\bruno.monteiro\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\bruno\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "C:\\PersonalGitHub\\UruIT\\back-end\\UruIT.GameOfDrones.Domain\\UruIT.GameOfDrones.Domain.csproj": {
-                "projectPath": "C:\\PersonalGitHub\\UruIT\\back-end\\UruIT.GameOfDrones.Domain\\UruIT.GameOfDrones.Domain.csproj"
+              "D:\\GitHub\\UruIT\\back-end\\UruIT.GameOfDrones.Domain\\UruIT.GameOfDrones.Domain.csproj": {
+                "projectPath": "D:\\GitHub\\UruIT\\back-end\\UruIT.GameOfDrones.Domain\\UruIT.GameOfDrones.Domain.csproj"
               },
-              "C:\\PersonalGitHub\\UruIT\\back-end\\UruIT.GameOfDrones.Repository\\UruIT.GameOfDrones.Repository.csproj": {
-                "projectPath": "C:\\PersonalGitHub\\UruIT\\back-end\\UruIT.GameOfDrones.Repository\\UruIT.GameOfDrones.Repository.csproj"
+              "D:\\GitHub\\UruIT\\back-end\\UruIT.GameOfDrones.Repository\\UruIT.GameOfDrones.Repository.csproj": {
+                "projectPath": "D:\\GitHub\\UruIT\\back-end\\UruIT.GameOfDrones.Repository\\UruIT.GameOfDrones.Repository.csproj"
               }
             }
           }
@@ -146,27 +142,25 @@
         }
       }
     },
-    "C:\\PersonalGitHub\\UruIT\\back-end\\UruIT.GameOfDrones.Domain\\UruIT.GameOfDrones.Domain.csproj": {
+    "D:\\GitHub\\UruIT\\back-end\\UruIT.GameOfDrones.Domain\\UruIT.GameOfDrones.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\PersonalGitHub\\UruIT\\back-end\\UruIT.GameOfDrones.Domain\\UruIT.GameOfDrones.Domain.csproj",
+        "projectUniqueName": "D:\\GitHub\\UruIT\\back-end\\UruIT.GameOfDrones.Domain\\UruIT.GameOfDrones.Domain.csproj",
         "projectName": "UruIT.GameOfDrones.Domain",
-        "projectPath": "C:\\PersonalGitHub\\UruIT\\back-end\\UruIT.GameOfDrones.Domain\\UruIT.GameOfDrones.Domain.csproj",
-        "packagesPath": "C:\\Users\\bruno.monteiro\\.nuget\\packages\\",
-        "outputPath": "C:\\PersonalGitHub\\UruIT\\back-end\\UruIT.GameOfDrones.Domain\\obj\\",
+        "projectPath": "D:\\GitHub\\UruIT\\back-end\\UruIT.GameOfDrones.Domain\\UruIT.GameOfDrones.Domain.csproj",
+        "packagesPath": "C:\\Users\\bruno\\.nuget\\packages\\",
+        "outputPath": "D:\\GitHub\\UruIT\\back-end\\UruIT.GameOfDrones.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\bruno.monteiro\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\bruno\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -202,34 +196,32 @@
         }
       }
     },
-    "C:\\PersonalGitHub\\UruIT\\back-end\\UruIT.GameOfDrones.Repository\\UruIT.GameOfDrones.Repository.csproj": {
+    "D:\\GitHub\\UruIT\\back-end\\UruIT.GameOfDrones.Repository\\UruIT.GameOfDrones.Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\PersonalGitHub\\UruIT\\back-end\\UruIT.GameOfDrones.Repository\\UruIT.GameOfDrones.Repository.csproj",
+        "projectUniqueName": "D:\\GitHub\\UruIT\\back-end\\UruIT.GameOfDrones.Repository\\UruIT.GameOfDrones.Repository.csproj",
         "projectName": "UruIT.GameOfDrones.Repository",
-        "projectPath": "C:\\PersonalGitHub\\UruIT\\back-end\\UruIT.GameOfDrones.Repository\\UruIT.GameOfDrones.Repository.csproj",
-        "packagesPath": "C:\\Users\\bruno.monteiro\\.nuget\\packages\\",
-        "outputPath": "C:\\PersonalGitHub\\UruIT\\back-end\\UruIT.GameOfDrones.Repository\\obj\\",
+        "projectPath": "D:\\GitHub\\UruIT\\back-end\\UruIT.GameOfDrones.Repository\\UruIT.GameOfDrones.Repository.csproj",
+        "packagesPath": "C:\\Users\\bruno\\.nuget\\packages\\",
+        "outputPath": "D:\\GitHub\\UruIT\\back-end\\UruIT.GameOfDrones.Repository\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\bruno.monteiro\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\bruno\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "C:\\PersonalGitHub\\UruIT\\back-end\\UruIT.GameOfDrones.Domain\\UruIT.GameOfDrones.Domain.csproj": {
-                "projectPath": "C:\\PersonalGitHub\\UruIT\\back-end\\UruIT.GameOfDrones.Domain\\UruIT.GameOfDrones.Domain.csproj"
+              "D:\\GitHub\\UruIT\\back-end\\UruIT.GameOfDrones.Domain\\UruIT.GameOfDrones.Domain.csproj": {
+                "projectPath": "D:\\GitHub\\UruIT\\back-end\\UruIT.GameOfDrones.Domain\\UruIT.GameOfDrones.Domain.csproj"
               }
             }
           }

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { RestService } from '../rest.service';
 
 @Component({
@@ -6,6 +6,9 @@ import { RestService } from '../rest.service';
   templateUrl: './match.component.html',
   styleUrls: ['./match.component.css']
 })
+
+/*MAIN COMPONENT OF APP*/
+
 export class MatchComponent implements OnInit {
   public defaultView = true;
   public roundView = false;
@@ -16,13 +19,13 @@ export class MatchComponent implements OnInit {
   public p2: any;
   public match: any;
   public handSignals: any;
-
+  public rounds: any;
   public choices: any;
   public p1selectedHand: any;
   public p2selectedHand: any;
-  public winnerName:string;
+  public winnerName: string;
 
-  constructor(public rest: RestService) { }
+  constructor(private rest: RestService) { }
 
   ngOnInit() {
     this.loadPlayers();
@@ -34,7 +37,7 @@ export class MatchComponent implements OnInit {
 
   public selectMoveOne(): void {
     this.moveOneVisible = false;
-    this.moveTwoVisible = true;  
+    this.moveTwoVisible = true;
     this.choices.push({ hand: this.p1selectedHand.description });
   }
 
@@ -56,67 +59,71 @@ export class MatchComponent implements OnInit {
   public loadHandSignals(): void {
     this.rest.getHandSignal().subscribe((res) => {
       this.handSignals = res.data;
+      this.p1selectedHand = this.p2selectedHand = this.handSignals[0];
     });
   }
 
-  public validateMatch(): void {  
-    var choiceP1 = this.choices[0].hand;
-    var choiceP2 = this.choices[1].hand;
-    var _winnerId: any;
-    if ((choiceP1 == "Rock" && choiceP2 == "Scissor") || (choiceP1 == "Paper" && choiceP2 == "Rock") || (choiceP1 == "Scissor" && choiceP2 == "Paper")) {
-      /*Log P1 win*/
+  public loadRounds(): void {
+    this.rest.filterRound({ matchId: this.match.id }).subscribe((res) => {
+      this.rounds = res.data;
+    });
+  }
+
+  public validateMatch(): void {
+    const choiceP1 = this.choices[0].hand;
+    const choiceP2 = this.choices[1].hand;
+    let _winnerId: any;
+
+    if ((choiceP1 === 'Rock' && choiceP2 === 'Scissor') ||
+      (choiceP1 === 'Paper' && choiceP2 === 'Rock') ||
+      (choiceP1 === 'Scissor' && choiceP2 === 'Paper')) {
       _winnerId = this.p1.id;
-    }
-    else if (choiceP1 == choiceP2) {
-      /*Log Draw */
+    } else if (choiceP1 === choiceP2) {
       _winnerId = 0;
-    }
-    else {
-      /*Log P2 win */
+    } else {
       _winnerId = this.p2.id;
     }
 
-    var round = {
+    const round = {
       matchId: this.match.id,
       playerId: this.p1.id,
       handsignalId: this.p1selectedHand.id,
       secondPlayerId: this.p2.id,
       secondHandSignalId: this.p2selectedHand.id,
       winnerId: _winnerId
-    }
+    };
+
+    const p1 = this.p1;
+    const p2 = this.p2;
 
     this.rest.addRound(round).subscribe((res) => {
+
       this.match.currentRound++;
+      this.loadRounds();
+
       this.rest.updateMatch(this.match.id, this.match).subscribe((res) => {
+
         if (this.match.currentRound <= 3) {
           this.moveOneVisible = true;
           this.moveTwoVisible = false;
           this.choices = [];
           this.roundView = true;
-        }
-        else {
+        } else {
           this.moveOneVisible = false;
           this.moveTwoVisible = false;
-          var p1Wins = 0;
-          var p2Wins = 0;
-          /*Calculate and show the winner*/
-          this.rest.filterRound({ matchId: this.match.id, playerId: this.p1.id }).subscribe((res) => {
-            p1Wins = res.data.length;
-            this.rest.filterRound({ matchId: this.match.id, secondPlayerId: this.p2.id }).subscribe((res) => {
-              p2Wins = res.data.length;
-              if(p1Wins > p2Wins)
-              {
-                  this.winnerName = this.p1.name;
-              }
-              else if(p1Wins < p2Wins)
-              {
-                  this.winnerName = this.p2.name;
-              }
-              else{
-                  this.winnerName = "Draw";
-              }
-
-            });
+          let p1Wins = 0;
+          let p2Wins = 0;
+          this.rest.filterRound({ matchId: this.match.id }).subscribe((res) => {
+            /*Calculate and show the winner*/
+            p1Wins = res.data.filter(function (x) { return x.winnerId === p1.id; }).length;
+            p2Wins = res.data.filter(function (x) { return x.winnerId === p2.id; }).length;
+            if (p1Wins > p2Wins) {
+              this.winnerName = p1.name;
+            } else if (p1Wins < p2Wins) {
+              this.winnerName = p2.name;
+            } else {
+              this.winnerName = 'Draw';
+            }
           });
         }
       });
