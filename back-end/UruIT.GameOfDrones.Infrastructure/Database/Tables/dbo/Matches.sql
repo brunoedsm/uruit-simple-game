@@ -5,8 +5,9 @@ IF EXISTS (SELECT * FROM dbo.sysobjects where id = object_id(N'dbo.[Matches]') a
 GO
 
 CREATE TABLE AssessmentDB.dbo.Matches (
-	Id int IDENTITY(1,1) NOT NULL,
+	Id bigint IDENTITY(1,1) NOT NULL,
 	DataRegister datetime2(7) NOT NULL,
+	HashId nvarchar(MAX) COLLATE Latin1_General_CI_AS NULL,
 	CurrentRound int NOT NULL,
 	CONSTRAINT PK_Matches PRIMARY KEY (Id)
 ) GO;
